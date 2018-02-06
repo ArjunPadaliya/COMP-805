@@ -21,8 +21,10 @@ def check_title(title_list):
 	title_list: list of strings
 	Returns: list of strings that are titles
 	"""
-
-
+	for item in title_list:
+		if not item.istitle():
+			title_list.remove(item)
+	return title_list
 
 
 def restock_inventory(inventory):
@@ -72,6 +74,5 @@ def average_grades(grades):
 			total_marks+=marks #sum up all the marks
 		#update value of that student in dictionary (grades) by dividing total marks with available number of marks in list
 		grades[student]=total_marks/len(grades[student])
-
 
 	return grades

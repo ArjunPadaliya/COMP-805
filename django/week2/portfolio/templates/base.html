@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <link rel='stylesheet' href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+    <div class="menu">
+    <center><h1 id="logo">Portfolio</h1></center>
+      <ul>
+        <li><a class="{{ home }}" href="{% url 'home' %}">Home</a></li>
+        <li><a class="{{ resume }}" href="">Resume</a></li>
+        <li><a class="{{ portfolio }}" href="">Portfolio</a></li>
+        <li><a class="{{ contact }}" href="">Contact</a></li>
+      </ul>
+    </div>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</div>
+</html>
