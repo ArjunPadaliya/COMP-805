@@ -20,3 +20,10 @@ def portfolio(request):
     '''
     context={'portfolio':'active'}
     return render(request, 'portfolio.html', context)
+
+def contact(request):
+    '''
+    Returns contact page
+    '''
+    context={'contact':'active'}
+    return render(request, 'contact.html', context)

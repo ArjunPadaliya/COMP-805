@@ -13,7 +13,7 @@
         <li><a class="{{ home }}" href="{% url 'home' %}">Home</a></li>
         <li><a class="{{ resume }}" href="{% url 'resume' %}">Resume</a></li>
         <li><a class="{{ portfolio }}" href="{% url 'portfolio' %}">Portfolio</a></li>
-        <li><a class="{{ contact }}" href="">Contact</a></li>
+        <li><a class="{{ contact }}" href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </div>
       {% block content %}
