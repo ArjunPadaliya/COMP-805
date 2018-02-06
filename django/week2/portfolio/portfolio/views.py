@@ -13,3 +13,10 @@ def resume(request):
     '''
     context={'resume':'active'}
     return render(request, 'resume.html', context)
+
+def portfolio(request):
+    '''
+    Returns resume page
+    '''
+    context={'portfolio':'active'}
+    return render(request, 'portfolio.html', context)
