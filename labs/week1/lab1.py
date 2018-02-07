@@ -1,8 +1,8 @@
 """
-Jon Shallow
+Arjun Padaliya
 UNHM COMP705/805 Lab 1
 An Introduction to Python
-Jan 19, 2018
+Jan 28, 2018
 
 The purpose of this file is to learn BASIC python syntax and data structures.
 There is an accompanying test file. Place both files in the same directory,
