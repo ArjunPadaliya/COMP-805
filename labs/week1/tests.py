@@ -1,8 +1,8 @@
 """
-Arjun Padaliya
+Jon Shallow
 UNHM COMP705/805 Lab 1
 An Introduction to Python
-Jan 28, 2018
+Jan 19, 2018
 
 The purpose of this file is to test the functions declared in
 lab1.py. This file does not use pythons unit test framework.
