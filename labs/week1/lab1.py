@@ -1,5 +1,5 @@
 """
-Jon Shallow
+Arjun Padaliya
 UNHM COMP705/805 Lab 1
 An Introduction to Python
 Jan 19, 2018
