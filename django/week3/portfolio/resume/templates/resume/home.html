@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <link rel='stylesheet' href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+    <div class="menu">
+    <center><h1 id="logo">Portfolio</h1></center>
+      <ul>
+        <li><a class="{{ home }}" href="{% url 'home' %}">Home</a></li>
+        <li><a class="{{ resume }}" href="">Resume</a></li>
+        <li><a class="{{ portfolio }}" href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li><a class="{{ contact }}" href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <center><h3>Experience</h3></center>
+      {% if experience %}
+      {% for exp in experience %}
+        <h4>{{exp.title}}- {{exp.location}}<span style="float:right">{{exp.start_date}}-{{exp.end_date}}</span></h5>
+        <p>{{exp.description}}</p>
+      {% endfor %}
+      {% else %}
+        <h5>Experience model is not defined in resume app</h5>
+      {% endif %}
+      <br>
+      <br>
+      <center><h3>Education</h3></center>
+      {% if education %}
+      {% for edu in education %}
+        <h4>{{edu.institution_name}}-{{edu.location}}</h5>
+        <p>{{edu.degree}}-{{edu.major}}, GPA: {{edu.gpa}}</p>
+      {% endfor %}
+      {% else %}
+        <h5>Education model is not defined in resume app</h5>
+      {% endif %}
+      <br>
+      <br>
+    </div>
+    </div>
+  </body>
+</div>
+</html>
