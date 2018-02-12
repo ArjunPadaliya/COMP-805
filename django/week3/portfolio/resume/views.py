@@ -1,6 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Education, Experience
 # Create your views here.
 
 def home(request):
-    return HttpResponse('Welcome to Resume')
+    '''
+    Renders home page from resume templates
+    '''
+    qsEx=Experience.objects.all()
+    qsEdu=Education.objects.all()
+    context={'experience': qsEx, 'education':qsEdu}
+    return render(request, 'resume/home.html', context)
