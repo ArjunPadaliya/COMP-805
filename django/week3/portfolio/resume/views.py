@@ -8,5 +8,5 @@ def home(request):
     '''
     qsEx=Experience.objects.all()
     qsEdu=Education.objects.all()
-    context={'experience': qsEx, 'education':qsEdu}
+    context={'experience': qsEx, 'education':qsEdu, 'resume':'active'}
     return render(request, 'resume/home.html', context)
