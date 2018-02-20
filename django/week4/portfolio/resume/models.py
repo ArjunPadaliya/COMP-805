@@ -6,14 +6,11 @@ class Resume(models.Model):
     first_name=models.CharField(max_length=64, null=False, blank=False)
     last_name=models.CharField(max_length=64, null=False, blank=False)
 
-    def __str__(self):
-        return "{}".format(self.last_name)
-
     def get_full_name(self):
         return "{} {}".format(self.first_name, self.last_name)
 
     def last_name_first_name(self):
-        return "{} {}".format(self.last_name, self.first_name)
+        return "{}, {}".format(self.last_name, self.first_name)
 
     def get_experience(self):
         return self.experience_set.all()
